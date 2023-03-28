@@ -79,7 +79,7 @@ type=2表示工单类型为请求,如果不写,默认类型为事件,即type=1
 
 ![image](https://user-images.githubusercontent.com/129045365/228146954-ca0d2b7c-b61f-4638-8f43-9ed0319b6640.png)
 
-项目网址:https://github.com/i-hive/glpi_webhook
+项目网址:https://github.com/i-hive/glpi_webhook 制作 BY 天与地
 
 QQ群:1097440406 网站:www.glpi-cn.com
-制作 BY 天与地
+
