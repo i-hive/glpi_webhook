@@ -40,19 +40,28 @@ type=2表示工单类型为请求,如果不写,默认类型为事件,即type=1
 
 - 如果命令行的话,也可以使用curl 加"网址"的方式来进行批处理添加.
 `curl "http://127.0.0.1:8000/glpi/webhook/send.php?name=gongdanmingcheng&content=neirong&type=2"`
-![b166c3052016dfa9452e53061c509ecf.png](:/ba13e94477d34237ae6b86c1f5b23635)
+
+![image](https://user-images.githubusercontent.com/129045365/228146757-c94d145d-1a5a-47a0-9f7c-bab9bf88b76e.png)
+
 - curl 后网址如果含有中文,必须经过百分号重编码才会被识别
 随便找一个URL编码网站https://www.matools.com/code-convert
-![b909b0aca595824784637aedb0b1cdb7.png](:/8d97ff5b19da41538c3d68412ef4ac85)
-![b3128ab6d19b85dd6e4b0ad66f2004dc.png](:/66950ce549594fc883cf3e0210686ec2)
+
+![image](https://user-images.githubusercontent.com/129045365/228146787-0b897c2e-99d5-43da-b7fb-4d70e8ed8d1a.png)
+
+![image](https://user-images.githubusercontent.com/129045365/228146801-36d6bea5-ed8a-4420-8312-36bdb29f4c96.png)
+
 #### 第二种办法:POST方法
 - 所用的json格式为
 {"input":{"name":"工单名称","content":"工单内容","type":"2"}}
 - Content-Type 为application/json
-![544f3faff520052cbf5c6eb66cfa97f8.png](:/b0c1795ff33a42829c5dc65d0096d70f)
+
+![image](https://user-images.githubusercontent.com/129045365/228146847-f6fa4723-621f-40d6-85e6-fe3a412b55f7.png)
+
 - 命令行 curl使用POST方法如下
 `curl -X POST -H "Content-Type: application/json" -d "{\"input\":{\"name\":\"gongdanbiaoti\",\"content\":\"gongdanneirong\",\"type\":\"2\"}}" "http://127.0.0.1:8000/glpi/webhook/send.php"`
-![022463343797b78d973d1a44d8b218b0.png](:/cfeed45f0fcc48509b3f6fe38a37ded8)
+
+![image](https://user-images.githubusercontent.com/129045365/228146914-3acad1d8-2001-4f50-9d21-bf05c4ffa391.png)
+
 注意,JSON对象必须用双引号括起来，对象内的双引号必须用反斜杠进行转义。
 此处CURL同样无法识别中文内容,如有中文需要Unicode转义序列对其进行编码
 
@@ -65,6 +74,8 @@ type=2表示工单类型为请求,如果不写,默认类型为事件,即type=1
 - 工单除了标题和内容外增加更多参数细节 点赞到20星开整
 - 扫码盘点功能,无需安装插件,无需登录,扫码之后立刻变更设备盘点状态 50星开整
 ## 各位的点星支持是我为爱发电的动力,请动动手指,右上角点个免费的星,一键三连
-![c8f0ab6cfa6c41623c8368c0052f8e5f.png](:/6d2b740a8896420780fc18e585483582)
+
+![image](https://user-images.githubusercontent.com/129045365/228146954-ca0d2b7c-b61f-4638-8f43-9ed0319b6640.png)
+
 项目网址:https://github.com/i-hive/glpi_webhook
 
