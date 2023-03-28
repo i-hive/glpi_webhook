@@ -39,6 +39,7 @@ type=2表示工单类型为请求,如果不写,默认类型为事件,即type=1
 ![image](https://user-images.githubusercontent.com/129045365/228146594-6d5a52cb-2eae-4225-84c8-663aa13ab454.png)
 
 - 如果命令行的话,也可以使用curl 加"网址"的方式来进行批处理添加.
+
 `curl "http://127.0.0.1:8000/glpi/webhook/send.php?name=gongdanmingcheng&content=neirong&type=2"`
 
 ![image](https://user-images.githubusercontent.com/129045365/228146757-c94d145d-1a5a-47a0-9f7c-bab9bf88b76e.png)
@@ -58,6 +59,7 @@ type=2表示工单类型为请求,如果不写,默认类型为事件,即type=1
 ![image](https://user-images.githubusercontent.com/129045365/228146847-f6fa4723-621f-40d6-85e6-fe3a412b55f7.png)
 
 - 命令行 curl使用POST方法如下
+
 `curl -X POST -H "Content-Type: application/json" -d "{\"input\":{\"name\":\"gongdanbiaoti\",\"content\":\"gongdanneirong\",\"type\":\"2\"}}" "http://127.0.0.1:8000/glpi/webhook/send.php"`
 
 ![image](https://user-images.githubusercontent.com/129045365/228146914-3acad1d8-2001-4f50-9d21-bf05c4ffa391.png)
