@@ -1,0 +1,25 @@
+## 一: 扫码建工单
+### 例子:扫码实现打印机耗材申领
+1. 新建一个网址,工单信息里预先填入打印机型号地点等信息
+`http://网址/glpi/webhook/send.php?name=耗材申领-富士施乐2060&content=地点-财务部-财务科&type=2`
+2. 将这个网址转为二维码,打印出来贴到打印机上面,
+![image](https://user-images.githubusercontent.com/129045365/228128165-f34289f3-3d6f-44ae-8a52-584a6873301d.png)
+3. 当没墨时,使用者可以用手机扫码访问此页面,GLPI后台即会自动生成一张工单
+- 可以使用在线单个转码比如www.2weima.com
+- 懂EXCEL的也可以使用excel批量生成二维码,或者使用标签软件来批量生成
+### 同样,在任何设备上都可以打印类似的标签
+- 比如在电话机后面贴一张二维码,内容写上电话号码和地点
+`http://网址/glpi/webhook/send.php?name=电话损坏-报修-号码-0108888888&content=地点-保安部-保卫科&type=2`
+![image](https://user-images.githubusercontent.com/129045365/228128180-2097e560-5a59-4184-9148-7257050ee11c.png)
+- 电脑,投影仪,显示器,等等都可以照搬.
+## 二: 为日常工作形成工单记录
+- 例子:假设服务器上有一个备份数据库的批处理命令,定时每天运行一次
+那么可以在该bat命令后加一句,(有中文需要先url解码)
+`curl "http:/网址/glpi/webhook/send.php?name=ERP服务器每日备份&content=数据库备份完成&type=2"`
+- 除了记录之外还可以水工作日志,懂的都懂.
+## 三: 为网络监控实现告警记录
+- zabbix,prometheus等发送webhook告警到glpi
+- 通过IFTTT等自动化工具,来实现一些联动功能,比如当天气预报是大雨的时候,通过webhook发送一张工单到GLPI,内容是检查机房有无漏雨
+
+后续功能有待发现,有好的建议可以[留言](https://github.com/i-hive/GLPI-WEBHOOK/issues/new)
+https://github.com/i-hive/GLPI-WEBHOOK/issues/new
