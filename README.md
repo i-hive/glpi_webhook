@@ -81,3 +81,5 @@ type=2表示工单类型为请求,如果不写,默认类型为事件,即type=1
 
 项目网址:https://github.com/i-hive/glpi_webhook
 
+QQ群:1097440406 网站:www.glpi-cn.com
+制作 BY 天与地
